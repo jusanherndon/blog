@@ -13,24 +13,25 @@ The different parts of my lab are the following:
 
 I am going to try and break down each component to explain what it does and why I am running all of these in my home network.
 
-NAS
+# NAS
 
   This is where I store all of my media for jellyfin and any extra files I want to have in a shared space. Its based on this [SBC](https://www.friendlyelec.com/index.php?route=product/product&product_id=294)
   and it currently has about 4 TB of storage on it. I am running a ZFS 1 pool of SSD's and it contributes to an NFS share that is setup.
   I am using friendlyelec's [openmediavault](https://www.openmediavault.org/) image for the os which is debian based.
 
-Managed switch
+# (Edited) Ubiquiti EdgeSwitch 5XP 
 
-  Right now the switch is just being used as a simple ethernet port extender off of my AP for my house, but it supports vlans and I have used it
-  to test certain configurations for the switches I use at work and it is a nice place to expieriment with new ideas I have for layer 2/ Layer 3
-  networking. (Data Link and Internet/transport Layers)
+  I made a change to my switch. I am actually using a Ubiquiti switch now for two reasons. 
+  1. It is far quieter than my old managed switch. It had a fan blowing all of the time, and I think my room is at least 20 db quieter now.
+  2. The switch can run Openwrt, so it technically is a router. Which may be confusing, but I like the fact that the switch can run open source software. 
 
-Router and AP
+  I did run into some difficulties setting up the switch on my network, which I will talk about here ![[multi\ router\ home\ lab.md]]
 
-  I got these from the job that I work at. They are WIFI 7 devices that are openwrt based with some extra programs for configuration. I can't
-  really say a lot about these device's since I do not want to leak anything about them.
+# Router and AP
 
-Lastly, I have my Nixos PC
+  I got these from the job that I work at. They are WiFi 7 devices that are openwrt based with some extra programs for configuration. I can't really say a lot about these device's since I do not want to leak anything about them.
+
+# Lastly, I have my Nixos PC
 
   First, I will talk about why I chose [Nixos](https://nixos.org/) instead of just any Linux distribution. This can honestly be a section itself, and when
   I make a new blog post about it, I will link it here. In short, I think Nixos is well suited for a homelab, becuase it allows for easy deployments,
@@ -70,3 +71,8 @@ This next section is dedicated to the software that runs in my home lab.
 
   Another benefit is that becuase Tailscale is built on top of wiregaurd tunnels, the connections are lightweight and tailscale also has
   an ACL (Access Control List) system built right in to secure your network even further.
+
+# Additional services I may want to get working
+
+- [CopyParty](https://github.com/9001/copyparty)
+- 
