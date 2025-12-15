@@ -26,3 +26,9 @@ Here are the devices I have in my network:
   This basically means that you want this device to not host its own DHCP server and their is another DHCP server that should handle giving out addresses. I also realized that the AP I am using above also uses this setting in order to use the main Router's DHCP server.
 
   Which is really useful when you have multiple devices handling networking, like I do. I was not able to setup a management ip for the EdgeSwitch, but everything else is working fine.
+
+# Lessons learned
+
+  Having multiple devices' handling the wireless and wired networking is hard. Their are a lot of factors that go into keeping a healthy network like multiple DHCP servers. Having a lot of private subnets really can help keep your network healthy. Just assign one /24 subnet to each device, and if a device ever gets the wrong ip address it makes debugging a whole lot simpler. Like when I updated my Router and AP, which run different software from the EdgeSwitch and the ATT&T gateway, and the EdgeSwitch decided to turn its IP subnet back on, since from its perspective the AP went offline, so no upstream DHCP server was found.
+
+  To solve that issue, I disconnect the EdgeSwitch's "WAN" port so that way any device upstream from the switch cannot get the wrong IP address. Once the AP and Router are back online, I plug the EdgeSwitch's WAN port back in and it detects the Upstream DHCP server and gives out its addresses instead. 
