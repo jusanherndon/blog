@@ -18,7 +18,7 @@ Here are the devices I have in my network:
 
 # Lastly, the Ubiquiti EdgeSwitch
 
-  Just to explain why I wanted a manged switch/router is because the AP I am using above only has one ethernet portand I have multiple devices that I want to use on Ethernet connections rather than wifi.
+  Just to explain why I wanted a manged switch/router is because the AP I am using above only has one ethernet port and I have multiple devices that I want to use on Ethernet connections rather than wifi.
  
 
   I had a lot of trouble when I first setup this device. This switch made router through Openwrt was strange. I knew to change the routing subnet to another private /24 network, but I was still getting incorrect ips from the device. Then I started looking through the [luci](https://github.com/openwrt/luci) gui and found a setting called **Authoritative DHCP server**.
