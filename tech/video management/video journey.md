@@ -42,7 +42,7 @@ ffmpeg -vaapi_device /dev/dri/renderD128 -i "{show_name_and_episode}" -x265-para
 
 Hopefully this is much more managable :). The -vaapi_device is just my graphics card. -i refers to the source video container. -x265-params is just a HEVC thing in ffmpeg to signify the first pass. -c:v signifies the video codec used for the output file, which in this case is AMD HEVC. 
 
-I am going to skip over the -rc, -qp_i, and -qp_p arguements becuase that goes really deep into the rabbit hole of video quality and how encoder settings can cause artifacting or other unpleasent things to show up in videos. Here is a link to the page I used to get those [arguements](https://github.com/GPUOpen-LibrariesAndSDKs/AMF/wiki/Recommended-FFmpeg-Encoder-Settings) if you want to read more about Constant QP. But it is an older technology and is being converted into a much easier metric like [Constant Rate Factor](https://slhck.info/video/2017/02/24/crf-guide.html) or crf.
+I am going to skip over the -rc, -qp_i, and -qp_p arguements becuase that goes really deep into the rabbit hole of video quality and how encoder settings can cause artifacting or other unpleasent things to show up in videos. Here is a link to the page I used to get those [arguements](https://github.com/GPUOpen-LibrariesAndSDKs/AMF/wiki/Recommended-FFmpeg-Encoder-Settings#rate-control) if you want to read more about Constant QP. But it is an older technology and is being converted into a much easier metric like [Constant Rate Factor](https://slhck.info/video/2017/02/24/crf-guide.html) or crf.
 
 If you want an easier way to manage quality, I would reccomend something like profiles in gpu codecs. It is a much easier place to start
 
