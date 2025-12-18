@@ -1,4 +1,4 @@
-I have a humble begginings when I started learning about video containers, video codecs, audio codecs, and subtitles. I wanted to host a media server and have the media I want to watch wherever I go.
+I have a humble beginnings when I started learning about video containers, video codecs, audio codecs, and subtitles. I wanted to host a media server and have the media I want to watch wherever I go.
 
 # Starter hardware
 
@@ -8,13 +8,13 @@ It does not have a lot of fancy software features becuase its an AMD card.
 
 # Starter Codecs and Containers
 
-I started with [H.264](https://trac.ffmpeg.org/wiki/Encode/H.264), because that is the most prevalent video out their. 
+I started with [H.264](https://trac.ffmpeg.org/wiki/Encode/H.264), because that is the most prevalent video out there. 
 
 I also had the [Subrip](https://en.wikipedia.org/wiki/SubRip) format to save the subtitle I had gotten from movies that I had digitized.
 
 I saved a lot of the audio in [AAC](https://trac.ffmpeg.org/wiki/Encode/AAC), because that was the default.
 
-Lastly, I googled which video conatiner to use and a lot of people pointed me to [Matroska](https://en.wikipedia.org/wiki/Matroska) video containers, since they are open source and frely available.
+Lastly, I googled which video conatiner to use and a lot of people pointed me to [Matroska](https://en.wikipedia.org/wiki/Matroska) video containers, since they are open source and support basically every codec under the sun. 
 
 # Motivation to try newer things
 
@@ -22,9 +22,9 @@ I really did not like the size of the video files I was working with. About 20 m
 
 I did some more research and found out that audio and subtitles do not really take up a lot of space in video containers. 
 
-Sidenote from Future Justin: You could maybe make an arguement for [FLAC](https://en.wikipedia.org/wiki/FLAC) or [WAV](https://en.wikipedia.org/wiki/WAV) audio files, but I was nowhere near that deep into audio codecs at that time.
+*Sidenote from Future Justin: You could maybe make an arguement for [FLAC](https://en.wikipedia.org/wiki/FLAC) or [WAV](https://en.wikipedia.org/wiki/WAV) audio files, but I was nowhere near that deep into audio codecs at that time.*
 
-So I continued on with my video codec research. I ended up finding [HEVC](https://trac.ffmpeg.org/wiki/Encode/H.265) or H.265 and [AV1](https://trac.ffmpeg.org/wiki/Encode/AV1). But sadly my GPU the AMD Radeon RX 6750XT did not support AV1 encode, so I was forced to choose HEVC.
+So I continued on with my video codec research. I ended up finding [HEVC](https://trac.ffmpeg.org/wiki/Encode/H.265) or H.265 and [AV1](https://trac.ffmpeg.org/wiki/Encode/AV1). But sadly my GPU did not support AV1 encode, so I was forced to choose HEVC.
 
 # Dark ages of transcoding
 
@@ -34,7 +34,7 @@ Here is an example command I would use: 'ffmpeg -vaapi_device /dev/dri/renderD12
 
 This is the end result of my work and I am going to break down step by step. 
 
-First of all, you can do [Two pass encoding](https://trac.ffmpeg.org/wiki/Encode/H.264). If you scroll down on the link it will show a Two Pass example. Two pass encoding allows ffmpeg to run its encoders over the file multiple times in order to get a better encoded file. In this case a 'better' file is usually smaller, but without loss in quality. 'Quality' is hard for me to define for my experience in video and audio codecs. So I will leave it up to people with more expierience then me.
+First of all, you can do [Two pass encoding](https://trac.ffmpeg.org/wiki/Encode/H.264). *If you scroll down on the link it will show a Two Pass example.* Two pass encoding allows ffmpeg to run its encoders over the file multiple times in order to get a better encoded file. In this case a 'better' file is usually smaller, but without loss in quality. 'Quality' is hard for me to define for my experience in video and audio codecs. So I will leave it up to people with more experience then me.
 
 # First Pass:
 
