@@ -52,10 +52,40 @@ The last arguements are just to signify it is a first pass and ffmpeg does not n
 
 ffmpeg -vaapi_device /dev/dri/renderD128 -i "{show_name_and_episode}" -map_metadata 0:g -x265-params "pass=2" -c:v hevc_amf -rc cqp -qp_p 20 -qp_i 20 -c:a aac "{transcoded_show_name}"
 
+# Not removing globabl metadata in video containers
 
 
 
-# Adding future links when I want to add some more to this article :)
-[Intel Arc Pro A40](https://www.intel.com/content/www/us/en/products/sku/230317/intel-arc-pro-a40-graphics/specifications.html)
-[Lossless Cut](https://mifi.no/losslesscut)
+# Problems I found with HEVC
+
+
+
+# Switching to using Handbrake 
+
 [Handbrke](https://handbrake.fr)
+
+
+# Switching to AV1
+
+[Intel Arc Pro A40](https://www.intel.com/content/www/us/en/products/sku/230317/intel-arc-pro-a40-graphics/specifications.html)
+
+
+# Using both Opus and AAC audio codecs
+
+
+
+# Sharing my videos through MP4 video containers rather than Matroska
+
+
+# Using Lossless Cut to more easily make clips
+
+[Lossless Cut](https://mifi.no/losslesscut)
+
+# Things I want to still explore
+
+- Subtitle codecs [Subtitle codecs](https://www.matroska.org/technical/subtitles.html)
+- Audio Codecs [FLAC](https://en.wikipedia.org/wiki/FLAC)
+- How constant Quality versus targeting a specific bitrate affects video quality
+- How to make better encodes for sharing with friends
+- Storing off old project files in a small file size while still perserving quality
+
