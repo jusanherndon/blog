@@ -52,34 +52,55 @@ The last arguements are just to signify it is a first pass and ffmpeg does not n
 
 ffmpeg -vaapi_device /dev/dri/renderD128 -i "{show_name_and_episode}" -map_metadata 0:g -x265-params "pass=2" -c:v hevc_amf -rc cqp -qp_p 20 -qp_i 20 -c:a aac "{transcoded_show_name}"
 
+Most of the arguements are the same as the first pass, so I am only going to cover the new parameters. -map_metadata is a subset of the -map parameter. Basically ffmpeg allows you to control where each bitstream is within a video container. The defaults are 0 for video, 1 for audio, and 2 for subtitle. The next two sections elaborate more on this parameter, so I am going to move on with the other parameters. -c:a refers to the audio codec. You can just leave it out if you do not want to force re-encode audio codecs. Like I do for subtitles here -c:s copy. And lastly it is just the output filename for the video container. Yaaay. Now you can at least reference this if you get confused on what parameters mean.
+
+# Example of remapping streams on twitch
+
+I mentioned this above when talking about the -map parameter. Basically [Twitch](https://twitch.tv) allows its creators to have two audio streams on its website. An example mapping is 0 video and 1 & 2 are audio. But Twitch will only save audio stream 1 in the recorded VOD. So it looks like this 0 and 1. A lot of creators have realized that you can basically stream any copyrighted audio as long as it is on the second audio stream. So a ton of VODs have creators listening to music during 'Just Chatting' segments and sadly the VOD watchers do not get to enjoy the music :(. I am not sure if their is a similar thing with [Youtube](https://youtube.com) or [Kick](https://kick.com) streaming.
+
 # Not removing globabl metadata in video containers
 
+This happened a lot before I started using the -map_metadata parameter. A lot of my old encoded video containers lost dates, chapter segements, encoder info etc. because I was not using this parameter.
 
+# Hard Subbing vs. Soft Subbing
+
+Basically 'Hard Subbing' is encoding the subtitle text into the actual video frame where as 'Soft Subbing' is just adding an extra subtitle stream to the video container. I believe that Soft Subbing is superior and should be used for all source files. I like to do everything I can to perserve video quality and Hard Subbing destroys video frames. I do sometimes have to use Hard Subbing when I am trying to share a video containers, but I only ever do that on the last encode before I share the file.
 
 # Problems I found with HEVC
 
+The biggest problem with HEVC is support. HEVC is owned by [MPEG](https://www.mpeg.org/standards/MPEG-H/2/) and each company that wants to support HEVC has to pay a license fee to get access to the codecs encoder and decoder. Because of this fee no browser supports playback of HEVC through its decoder. Which means Youtube's, Netflix's, and Social medias like Discord, twitter etc cannot play this video codec. The video container has to be downloaded or a special player like [VLC](https://www.videolan.org/vlc/), [MPV](https://mpv.io/) or another one needs to be used. 
 
+On Windows, if you do not want to download mpv or VLC you have to install [this](https://apps.microsoft.com/detail/9nmzlz57r3t7?hl=en-US&gl=US) to get the windows media player to support HEVC.
 
-# Switching to using Handbrake 
+# Consequences of HEVC and the birth of AV1
 
-[Handbrke](https://handbrake.fr)
-
+As a result of HEVC being locked behind a paywall, this stifled video on the internet. The big players like Google basically bought out the [VP9](https://en.wikipedia.org/wiki/VP9) and have their own special codec for YouTube. But as for other companies like Netflix and Vimeo they had to use H.264 which is really [old](https://en.wikipedia.org/wiki/Advanced_Video_Coding) or pay for HEVC. So eventually a lot of the big companies got together and made AV1 and the [AOM](https://aomedia.org/). Because the point of all of these websites is not to sell you a video codec, but each big company wanted an amazing experience, without each company having to pay MPEG's fee for HEVC. For context H.264 is from 2003 and H.265 is from 2013. So every web company streaming video was eager for a lot of improvements to how videos are stored and shared.
 
 # Switching to AV1
 
-[Intel Arc Pro A40](https://www.intel.com/content/www/us/en/products/sku/230317/intel-arc-pro-a40-graphics/specifications.html)
+I also wanted to start using AV1 becuase Jellyfin has a web player too, but I could only watch the HEVC videos on device's with HEVC support. I ended up finding this gpu from intel called the [Intel Arc Pro A40](https://www.intel.com/content/www/us/en/products/sku/230317/intel-arc-pro-a40-graphics/specifications.html), which was around $200. Where AMD's and Nvidia's cards were way more expensive. I did run into a huge issue that I had a lot of HEVC encoded video and H.264. So I needed a way to convert them to AV1. 
 
+I installed the intel gpu into my main desktop and tried pointing ffmpeg towards the intel card instead of the AMD card. And I ran into a bunch of issues, since not a lot of people run 2 gpu's on a desktop and its even rarer to use AMD and Intel.
+
+# Switching to using Handbrake 
+
+To temporarily solve the issue above I started using [Handbrke](https://handbrake.fr). This project is super nice and helped me visual what the ffmpeg commands above were doing. The program supports 2 GPU setups very easily and has a lot of improvements over just using ffmpeg commands. I have manually converted over a bunch of my HEVC videos to AV1 and I can play most of my media library through web players now. Yaay!!!
+
+# Making a video transcoding server
+
+From the mess of converting HEVC to AV1, I wanted to find a way to automate the process. I basically settled on making a brand new pc for my intel card and converting my two GPU desktop into two 1 GPU desktops. I also made sure it had a full itx motherboard, so I may start running other home services on it. It is starting as a humble transcoding server, but it has the potential to be so much more :).
 
 # Using both Opus and AAC audio codecs
 
-
-
-# Sharing my videos through MP4 video containers rather than Matroska
-
+I have done a little experimenting with the [Opus audio codec](https://opus-codec.org/) and it is really cool. It is supported just like [AAC](https://en.wikipedia.org/wiki/Advanced_Audio_Coding) but the opus codec is better for streaming because of the support of way more bitrates than AAC. For my home lab purposes, I think AAC and OPUS are probably equal in terms of usefulness, but I understand why YouTube and Discord prefer OPUS over AAC.
 
 # Using Lossless Cut to more easily make clips
 
 [Lossless Cut](https://mifi.no/losslesscut)
+
+# Sharing my videos through MP4 video containers rather than Matroska
+
+
 
 # Things I want to still explore
 
