@@ -30,7 +30,7 @@ So I continued on with my video codec research. I ended up finding [HEVC](https:
 
 Well, I wanted to shrink those video containers, so I learned how to [transcode](https://en.wikipedia.org/wiki/Transcoding) via [ffmpeg](https://ffmpeg.org/) terminal commands. 
 
-Here is an example command I would use: 'ffmpeg -vaapi_device /dev/dri/renderD128 -i "{show_name_and_episode}" -x265-params "pass=1" -c:v hevc_amf -rc cqp -qp_i 20 -qp_p 20 -an -f null /dev/null && ffmpeg -vaapi_device /dev/dri/renderD128 -i "{show_name_and_episode}" -map_metadata 0:g -x265-params "pass=2" -c:v hevc_amf -rc cqp -qp_p 20 -qp_i 20 -c:a aac "{transcoded_show_name}"'
+Here is an example command I would use: `'ffmpeg -vaapi_device /dev/dri/renderD128 -i "{show_name_and_episode}" -x265-params "pass=1" -c:v hevc_amf -rc cqp -qp_i 20 -qp_p 20 -an -f null /dev/null && ffmpeg -vaapi_device /dev/dri/renderD128 -i "{show_name_and_episode}" -map_metadata 0:g -x265-params "pass=2" -c:v hevc_amf -rc cqp -qp_p 20 -qp_i 20 -c:a aac "{transcoded_show_name}"'`
 
 This is the end result of my work and I am going to break down step by step. 
 
