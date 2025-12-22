@@ -38,11 +38,11 @@ First of all, you can do [Two pass encoding](https://trac.ffmpeg.org/wiki/Encode
 
 # First Pass:
 
-ffmpeg -vaapi_device /dev/dri/renderD128 -i "{show_name_and_episode}" -x265-params "pass=1" -c:v hevc_amf -rc cqp -qp_i 20 -qp_p 20 -an -f null /dev/null 
+`ffmpeg -vaapi_device /dev/dri/renderD128 -i "{show_name_and_episode}" -x265-params "pass=1" -c:v hevc_amf -rc cqp -qp_i 20 -qp_p 20 -an -f null /dev/null`
 
-Hopefully this is much more managable :). The -vaapi_device is just my graphics card. -i refers to the source video container. -x265-params is just a HEVC thing in ffmpeg to signify the first pass. -c:v signifies the video codec used for the output file, which in this case is AMD HEVC. 
+Hopefully this is much more managable :). The `-vaapi_device` is just my graphics card. `-i` refers to the source video container. `-x265-params` is just a HEVC thing in ffmpeg to signify the first pass. `-c:v` signifies the video codec used for the output file, which in this case is AMD HEVC. 
 
-I am going to skip over the -rc, -qp_i, and -qp_p arguements becuase that goes really deep into the rabbit hole of video quality and how encoder settings can cause artifacting or other unpleasent things to show up in videos. Here is a link to the page I used to get those [arguements](https://github.com/GPUOpen-LibrariesAndSDKs/AMF/wiki/Recommended-FFmpeg-Encoder-Settings#rate-control) if you want to read more about Constant QP. But it is an older technology and is being converted into a much easier metric like [Constant Rate Factor](https://slhck.info/video/2017/02/24/crf-guide.html) or crf.
+I am going to skip over the `-rc`, `-qp_i`, and `-qp_p` arguements becuase that goes really deep into the rabbit hole of video quality and how encoder settings can cause artifacting or other unpleasent things to show up in videos. Here is a link to the page I used to get those [arguements](https://github.com/GPUOpen-LibrariesAndSDKs/AMF/wiki/Recommended-FFmpeg-Encoder-Settings#rate-control) if you want to read more about Constant QP. But it is an older technology and is being converted into a much easier metric like [Constant Rate Factor](https://slhck.info/video/2017/02/24/crf-guide.html) or `crf`.
 
 If you want an easier way to manage quality, I would reccomend something like profiles in gpu codecs. It is a much easier place to start
 
@@ -50,9 +50,9 @@ The last arguements are just to signify it is a first pass and ffmpeg does not n
 
 # Second Pass:
 
-ffmpeg -vaapi_device /dev/dri/renderD128 -i "{show_name_and_episode}" -map_metadata 0:g -x265-params "pass=2" -c:v hevc_amf -rc cqp -qp_p 20 -qp_i 20 -c:a aac "{transcoded_show_name}"
+`ffmpeg -vaapi_device /dev/dri/renderD128 -i "{show_name_and_episode}" -map_metadata 0:g -x265-params "pass=2" -c:v hevc_amf -rc cqp -qp_p 20 -qp_i 20 -c:a aac "{transcoded_show_name}"`
 
-Most of the arguements are the same as the first pass, so I am only going to cover the new parameters. -map_metadata is a subset of the -map parameter. Basically ffmpeg allows you to control where each bitstream is within a video container. The defaults are 0 for video, 1 for audio, and 2 for subtitle. The next two sections elaborate more on this parameter, so I am going to move on with the other parameters. -c:a refers to the audio codec. You can just leave it out if you do not want to force re-encode audio codecs. Like I do for subtitles here -c:s copy. And lastly it is just the output filename for the video container. Yaaay. Now you can at least reference this if you get confused on what parameters mean.
+Most of the arguements are the same as the first pass, so I am only going to cover the new parameters. `-map_metadata` is a subset of the `-map` parameter. Basically ffmpeg allows you to control where each bitstream is within a video container. The defaults are 0 for video, 1 for audio, and 2 for subtitle. The next two sections elaborate more on this parameter, so I am going to move on with the other parameters. `-c:a` refers to the audio codec. You can just leave it out if you do not want to force re-encode audio codecs. Like I do for subtitles here `-c:s copy`. And lastly it is just the output filename for the video container. Yaaay. Now you can at least reference this if you get confused on what parameters mean.
 
 # Example of remapping streams on twitch
 
@@ -60,7 +60,7 @@ I mentioned this above when talking about the -map parameter. Basically [Twitch]
 
 # Not removing globabl metadata in video containers
 
-This happened a lot before I started using the -map_metadata parameter. A lot of my old encoded video containers lost dates, chapter segements, encoder info etc. because I was not using this parameter.
+This happened a lot before I started using the `-map_metadata` parameter. A lot of my old encoded video containers lost dates, chapter segements, encoder info etc. because I was not using this parameter.
 
 # Hard Subbing vs. Soft Subbing
 
@@ -74,7 +74,7 @@ On Windows, if you do not want to download mpv or VLC you have to install [this]
 
 # Consequences of HEVC and the birth of AV1
 
-As a result of HEVC being locked behind a paywall, this stifled video on the internet. The big players like Google basically bought out the [VP9](https://en.wikipedia.org/wiki/VP9) and have their own special codec for YouTube. But as for other companies like Netflix and Vimeo they had to use H.264 which is really [old](https://en.wikipedia.org/wiki/Advanced_Video_Coding) or pay for HEVC. So eventually a lot of the big companies got together and made AV1 and the [AOM](https://aomedia.org/). Because the point of all of these websites is not to sell you a video codec, but each big company wanted an amazing experience, without each company having to pay MPEG's fee for HEVC. For context H.264 is from 2003 and H.265 is from 2013. So every web company streaming video was eager for a lot of improvements to how videos are stored and shared.
+As a result of HEVC being locked behind a paywall, this stifled video on the internet. The big players like Google basically bought out the [VP9](https://en.wikipedia.org/wiki/VP9) codec and had their own special codec for YouTube. But as for other companies like Netflix and Vimeo they had to use H.264 which is really [old](https://en.wikipedia.org/wiki/Advanced_Video_Coding) or pay for HEVC. So eventually a lot of the big companies got together and made AV1 and the [AOM](https://aomedia.org/). Because the point of all of these websites is not to sell you a video codec, but each big company wanted an amazing experience, without each company having to pay MPEG's fee for HEVC. For context H.264 is from 2003 and H.265 is from 2013. So every web company streaming video was eager for a lot of improvements to how videos are stored and shared.
 
 # Switching to AV1
 
