@@ -58,7 +58,7 @@ Most of the arguements are the same as the first pass, so I am only going to cov
 
 I mentioned this above when talking about the `-map` parameter. Basically [Twitch](https://twitch.tv) allows its creators to have two audio streams on its website. An example mapping is 0 video and 1 & 2 are audio. But Twitch will only save audio stream 1 in the recorded VOD. So it looks like this 0 and 1. A lot of creators have realized that you can basically stream any copyrighted audio as long as it is on the second audio stream. So a ton of VODs have creators listening to music during 'Just Chatting' segments and sadly the VOD watchers do not get to enjoy the music :(. I am not sure if their is a similar thing with [Youtube](https://youtube.com) or [Kick](https://kick.com) streaming.
 
-# Not removing globabl metadata in video containers
+# Not removing global metadata in video containers
 
 This happened a lot before I started using the `-map_metadata` parameter. A lot of my old encoded video containers lost dates, chapter segements, encoder info etc. because I was not using this parameter.
 
