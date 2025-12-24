@@ -98,6 +98,8 @@ I have done a little experimenting with the [Opus audio codec](https://opus-code
 
 [Lossless Cut](https://mifi.no/losslesscut)
 
+[KdenLive](https://kdenlive.org/)
+
 # Sharing my videos through MP4 video containers rather than Matroska
 
 
