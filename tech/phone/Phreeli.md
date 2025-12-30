@@ -16,6 +16,8 @@ I have had a lot of issues through this process, but Phreeli support has been su
 
 Well, my previous carrier still has not ported my phone number, so I did some google searching and found the [FCC Customer Complaints Form](https://consumercomplaints.fcc.gov/hc/en-us?return_to=%2Fhc%2Frequests). So maybe this will help me transfer my phone number in between carriers.
 
+Well the FCC got back with me within a day and said they served my complaint to the carrier. I just got another temporary number transfer PIN and I am waiting for my carrier's response.
+
 # Takeaway
 
 TLDR; I really appreciate Phreeli's documenation, support, and straight forward terms in their [FAQ](https://www.phreeli.com/faq), [Privacy Policy](https://www.phreeli.com/privacy/policy), [Terms of Service](https://www.phreeli.com/terms-of-service) and the [letter from the Founder](https://www.phreeli.com/privacy-letter).
