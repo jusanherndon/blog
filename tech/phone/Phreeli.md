@@ -12,7 +12,7 @@ Before I started using this carrier, I was using a previous carrier with an exis
 
 *Sidenote: their are limits to when you can transfer phone numbers due to FCC* [guidelines](https://www.fcc.gov/consumers/guides/porting-keeping-your-phone-number-when-you-change-providers)*. One major thing to consider is that if you move geographical regions, phone number porting between carriers may not be possible, since all phone numbers are area based with the area code and the phone number afterwards.*
 
-*Timespan of the paragraph below: 3 days*
+*Timespan of the paragraph below: 2 days*
 
 I have had a lot of issues through this process, but Phreeli support has been super helpful. They responded to me in a few hours after my initial email. Made sure my phone number was actually in their service database. Pointed out to me that it was not and I then started calling my previous carrier to get them to actually port over my number. When my previous carrier did finally decide to start the process, it was at 3 and 5 AM. When I was sleeping, but after the Transfer Number PIN I requested was expired. So I had to call that carrier back again to try and start the porting process again.
 
