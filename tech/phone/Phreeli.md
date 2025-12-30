@@ -25,6 +25,7 @@ My previous carrier still has not ported my phone number, so I did some google s
 The FCC got back with me within a day and said they served my complaint to the carrier. I just got another temporary number transfer PIN and I am waiting for my carrier's response about porting over my phone number.
 
 *Reflecting on what I typed previously*
+
 Thinking back on what I did, I may have just added a lot more stress to the engineers trying to help transfer my phone number. Phreeli support messaged me back with an error that happened, and I am going to take a second to try and be more level headed in my explanation above. 
 
 The previous carrier's engineer's probably kicked off the job to transfer the phone number a couple days after, becuase my Family Plan is 10+ years old and is a nightmare to maintain. Their were probably a lot of issues with the plan and it required a couple of days to try and fix. After they kicked it off, the carrier probably did not think of the fact that the Number Transfer PIN I requested had expired and the job was kicked off to run overnight. Also most customer's would not understand that and I am not entitled to the private information within the carrier. If support calls me back, I am going to try and go in with a level head first. 
