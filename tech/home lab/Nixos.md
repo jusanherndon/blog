@@ -6,7 +6,7 @@ I mentioned using Nixos in my [Home Lab post](https://github.com/jusanherndon/bl
 
 The Nix ecosystem is kinda complex and hard to understand at first. I am going to try and break down Nix like what I saw in this [video](https://www.youtube.com/watch?v=5D3nUU1OVx8) from Surma. Their are four aspects I want to dive into for this discussion. What is the motivation for the Nix Ecosystem? What is Nix? What are Nix packages? and why have a seperate Linux distrobution for all of this?
 
-# Motivation for Nix project
+# Motivation for the Nix project
 
 I first want to start at the beginning. Here is the link to the [Nix PHD Thesis](https://edolstra.github.io/pubs/phd-thesis.pdf). You do not have to read the whole thing, but I think its worth looking deeper into if you want to better understand the computer problems involved and what Nix tries to do to fix them.
 
