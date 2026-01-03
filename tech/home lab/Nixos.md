@@ -10,11 +10,17 @@ The Nix ecosystem is kinda complex and hard to understand at first. I am going t
 
 I first want to start at the beginning. Here is the link to the [Nix PHD Thesis](https://edolstra.github.io/pubs/phd-thesis.pdf). You do not have to read the whole thing, but I think its worth looking deeper into if you want to better understand the computer problems involved and what Nix tries to do to fix them.
 
-One thing I like to get out of the way is that Nix cannot fix bad software. Its a Packaging schema that tries to solve the issues that arise on Linux because of dynamic linking of binaries. 
-
-So lets get started. What is the reason Nix exists. Page 11 of the thesis says this: "This thesis is about getting computer programs from one machine to another—and having them still work when they get there. This is the problem of *software deployment*." 
+So lets get started. What is the reason Nix exists? Page 11 of the thesis says this: "This thesis is about getting computer programs from one machine to another—and having them still work when they get there. This is the problem of *software deployment*." 
 
 Nix was created to help deploy software on multiple machines. Their are several issues in software deployment, but Nix mainly focuses on two different kinds. Environment and Manageability issues.
+
+## Environment issues
+
+ 
+
+## Manageability issues
+
+
 
 # Nix Package Manager and Nix programming Language
 
