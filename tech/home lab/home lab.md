@@ -25,7 +25,7 @@ I am going to try and break down each component to explain what it does and why 
   1. It is far quieter than my old managed switch. It had a fan blowing all of the time, and I think my room is at least 20 db quieter now.
   2. The switch can run Openwrt, so it technically is a router. Which may be confusing, but I like the fact that the switch can run open source software. 
 
-  I did run into some difficulties setting up the switch on my network, which I will talk about here ![[multi\ router\ home\ lab.md]]
+  I did run into some difficulties setting up the switch on my network, which I will talk about [here](https://github.com/jusanherndon/blog/blob/master/tech/home%20lab/multi%20router%20home%20lab.md) 
 
 # Router and AP
 

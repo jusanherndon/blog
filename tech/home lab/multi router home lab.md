@@ -1,4 +1,4 @@
-As I mentioned in my home\ lab.md file, I am using a [Ubiquiti EdgeSwitch 5XP](https://store.ui.com/us/en/category/wired-edge-max-switching/products/es-5xp) in my home lab.
+As I mentioned in my [home lab](https://github.com/jusanherndon/blog/blob/master/tech/home%20lab/home%20lab.md#edited-ubiquiti-edgeswitch-5xp) file, I am using a [Ubiquiti EdgeSwitch 5XP](https://store.ui.com/us/en/category/wired-edge-max-switching/products/es-5xp) in my home lab.
 
 I am including a drawling in this folder to give a good example of how my home lab topology looks.
 
