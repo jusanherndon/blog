@@ -34,7 +34,7 @@ I am going to try and break down each component to explain what it does and why 
 # Lastly, I have my Nixos PC
 
   First, I will talk about why I chose [Nixos](https://nixos.org/) instead of just any Linux distribution. This can honestly be a section itself, and when
-  I make a new blog post about it, I will link it here. In short, I think Nixos is well suited for a homelab, becuase it allows for easy deployments,
+  I make a new blog post about it, I will link it [here](https://github.com/jusanherndon/blog/blob/master/tech/home%20lab/Nixos.md). In short, I think Nixos is well suited for a homelab, becuase it allows for easy deployments,
   shared configurations between devices and if a computer ever goes down, easy redeployments of the same environment over and over again.
 
 
