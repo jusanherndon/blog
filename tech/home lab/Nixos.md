@@ -8,7 +8,7 @@ The Nix ecosystem is kinda complex and hard to understand at first. I am going t
 
 # Aside for how software gets built 
 
-I feel like this section is necessary because there are several different ways software can be run and deployed. [The PHD Thesis](https://edolstra.github.io/pubs/phd-thesis.pdf) mainly focuses on the **C programming language**. Where software gets built using a Compilation and a Linking phase. Nix handles many different progamming languages like Python which is an interpreted language. Python has a interpreter written in C and needs to be installed on every computer running Python. For now I am going to use C in this explanation and you can look up other software langauages in your own time.
+I feel like this section is necessary because there are several different ways software can be run and deployed. [The PHD Thesis](https://edolstra.github.io/pubs/phd-thesis.pdf) mainly focuses on the **C programming language**. Where software gets built using a Compilation and a Linking phase. Nix handles many different progamming languages like Python which is an interpreted language. Python has a interpreter written in C and needs to be installed on every computer running Python. For now I am going to use C in this explanation and you can look up other software languages in your own time.
 
 ## Compilation
 
