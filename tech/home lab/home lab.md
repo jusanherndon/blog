@@ -29,7 +29,7 @@ I am going to try and break down each component to explain what it does and why 
 
 # Router and AP
 
-  I got these from the job that I work at. They are WiFi 7 devices that are openwrt based with some extra programs for configuration. I can't really say a lot about these device's since I do not want to leak anything about them.
+  They are WiFi 7 devices that are openwrt based with some extra programs for configuration. 
 
 # Lastly, I have my Nixos PC
 
