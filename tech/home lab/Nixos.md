@@ -46,6 +46,7 @@ Nix was created to help deploy software on multiple machines. Their are several 
 
 [Nix Garbage collect](https://nix.dev/manual/nix/2.28/command-ref/nix-collect-garbage.html)
 [Nix generations](https://blog.bitclvx.com/posts/nix-generations/)
+[Nix switch generations command](https://releases.nixos.org/nix/nix-2.22.3/manual/command-ref/nix-env/switch-generation.html)
 
 Other Learning resources:
 [No Boilerplate](https://www.youtube.com/watch?v=CwfKlX3rA6E)
