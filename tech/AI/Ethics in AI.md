@@ -9,4 +9,4 @@
 [AI Data Comms Crisis](https://www.youtube.com/watch?v=CdKxgT1o864)
 [Hugging Face](https://huggingface.co/models?library=safetensors)
 [Olama](https://ollama.com/)
-
+[AI example in Vocaloid](https://www.youtube.com/watch?v=R8fuPgbOhTM)
