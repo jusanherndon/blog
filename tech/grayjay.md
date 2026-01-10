@@ -1,7 +1,7 @@
 
 # Concept behind Grayjay
 
-Here is a link to their [website](https://grayjay.app/). The reason this app exists is to have a shared platform between evyer type of social media. The video sites like Youtube and Twitch. Some picture based like Patreon. ANd many more in the works. Without breaking the current account structure of those websites. So to access Paid content like YouTube Membership streams and Patreon paid posts you still need accounts.
+Here is a link to their [website](https://grayjay.app/). The reason this app exists is to have a shared platform between every type of social media. The video sites like Youtube and Twitch. Some picture based like Patreon. And many more in the works. Without breaking the current account structure of those websites. So to access Paid content like YouTube Membership streams and Patreon paid posts you still need accounts.
 
 # Plugins
 
@@ -18,7 +18,7 @@ They also have a [Desktop](https://grayjay.app/desktop/) and [Mobile app](https:
 # Speed Round of other features
 
 - Local Syncing of grayjay's databases through [Sync Sever and Client](https://gitlab.futo.org/videostreaming/syncserver/-/tree/master?ref_type=heads)
-- [Fcast](https://gitlab.futo.org/videostreaming/fcast) Open Source Casting prtocol that works to replace Chromecasts and Airplay devices
+- [Fcast](https://gitlab.futo.org/videostreaming/fcast) Open Source Casting protocol that works to replace Chromecasts and Airplay devices
 - Connections to [PolyCentric](https://docs.polycentric.io/#why-polycentric) an Open Source distributed Social network
 - And many more with the [FUTO](https://www.futo.org/) ecosystem
 
