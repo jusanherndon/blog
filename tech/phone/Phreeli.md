@@ -32,6 +32,27 @@ The previous carrier's engineer's probably kicked off the job to transfer the ph
 
 I should probably not always assume the worst in people and give the engineers some time to fix the number. I will continue to request new Number Transfer PINs and filling out new requests from Phreeli's website daily. I will change my tone for now. I still have service on my old phone number.
 
+*Many many weeks later*
+
+I have finally gotten my phone number trasferred over. My main issue previously was that I was using the wrong account number. Apparently, I needed to give the Wireless account number to Phreeli to initiate the transfer.
+
+I also inadvertantly found some number transfer bugs on the Phreeli side as well. Both sides had their own issues I had to work through in order to get my phone number transferred.
+
+I have only had the service used for about a day now, but I am excited to try out how [MVNOs](https://en.wikipedia.org/wiki/Mobile_virtual_network_operator) deliver service compared to the top three major carriers.
+
+*Special Sidenote*
+
+I went through a lot of frustration with this process. Part of it is because of how complicated Telecom is and part of it was because I did not actually own my account, since it was on a family plan. I am not really sure what would be a good solution to the problem, since a lot of things in the world just get more and more complicated as time goes on. People's expectations change and things are put into place have weird side affects.
+
+Like this [law](https://www.federalregister.gov/documents/2023/12/08/2023-26338/protecting-consumers-from-sim-swap-and-port-out-fraud) put into place to try to prevent phone transfer fraud and abuse. On the one hand, it is nice that this was an issue that was genuinly looked at and now is trying to prevent people from forcefully transfering a phone number and trying to prevent harm. I am not sure how this affects people using the top three carries, but for me, my previous carrier sent out verification texts in the morning and I missed all but one of the attempts they sent me. Then if you fail a verification, they put my account on lock for a week, causing me to wait even longer.
+
+None of this was explained to me until the last support call I made before my phone number got transfered. Also the carrier did not even bother with a verification text. They literally just transferred it at 03:00. I guess a lot of things do not end with a bang, but a humble whimper. 
+
+Also to explain what I was talking about not owning my account, I had to have my Dad explain to the carrier about my phone transfer problems, since he was the account holder. My dad does not know about tech like I do and for better or worse, he could not explain to the support agents what the problem was.
+
+On the last support call, he just handed me the phone and within about 2 minutes the service lady knew the problem and transferred us to the right departments. I do feel bad for support people in call centers, because I think a lot of them are really smart and could help solve a lot of problems, but they are reliant on customers to give them the correct information in order to solve the porblem.
+
+I know technology has come a long way in trying to provide them with the adequate data, but those tools can only go so far. And with every aspect of life getting more difficult, Patience feels like it is more neccessary if you want to get a lot of things accomplished now adays. I try to not yell at support people, because if I was on the other side of the phone call, I would not want someone to yell at me. We all get frustrated and confused with technology. So everyone should at least try to not make someones day worse.
 
 # Takeaway
 
